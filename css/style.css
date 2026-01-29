@@ -27,7 +27,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--black);
     margin-bottom: 1rem;
@@ -71,7 +76,8 @@ img {
     letter-spacing: 1px;
     cursor: pointer;
     transition: var(--transition);
-    border-radius: 4px; /* Slightly rounded for modern feel */
+    border-radius: 4px;
+    /* Slightly rounded for modern feel */
 }
 
 .btn:hover {
@@ -123,7 +129,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -195,7 +201,8 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616394584238-638e54e43729?q=80&w=2670&auto=format&fit=crop'); /* Placeholder image */
+    /* Rich radial gradient overlay for depth */
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(18, 18, 18, 0.9) 100%), url('https://images.unsplash.com/photo-1616394584238-638e54e43729?q=80&w=2670&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -204,25 +211,38 @@ nav {
     justify-content: center;
     text-align: center;
     color: var(--white);
-    margin-top: 0; /* Override margin if any */
+    margin-top: 0;
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 2rem;
+    max-width: 900px;
+    padding: 3rem;
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    /* Golden Text Gradient */
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
     color: var(--light-gray);
+    font-weight: 300;
 }
 
 /* Services */
@@ -241,7 +261,7 @@ nav {
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -262,7 +282,7 @@ nav {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover::before {
@@ -288,7 +308,8 @@ nav {
 
 .about-content {
     display: flex;
-    flex-direction: column; /* Mobile first, override in media query */
+    flex-direction: column;
+    /* Mobile first, override in media query */
     gap: 3rem;
     align-items: center;
 }
@@ -362,6 +383,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -373,11 +395,11 @@ footer {
     .about-content {
         flex-direction: row;
     }
-    
+
     .section-title {
         font-size: 3rem;
     }
-    
+
     .hero h1 {
         font-size: 4.5rem;
     }
@@ -392,17 +414,22 @@ footer {
         position: absolute;
         right: 0px;
         height: 100vh;
-        top: 0vh; /* adjusted for fixed header */
+        top: 0vh;
+        /* adjusted for fixed header */
         background-color: var(--black);
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* Center items vertically */
-        width: 100%; /* Full width mobile menu */
+        justify-content: center;
+        /* Center items vertically */
+        width: 100%;
+        /* Full width mobile menu */
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        z-index: 999; /* Below header content but above page */
-        padding-top: 3rem; /* Space for X icon potentially */
+        z-index: 999;
+        /* Below header content but above page */
+        padding-top: 3rem;
+        /* Space for X icon potentially */
     }
 
     .nav-links li {
@@ -412,9 +439,10 @@ footer {
 
     .burger {
         display: block;
-        z-index: 1001; /* Above nav-links */
+        z-index: 1001;
+        /* Above nav-links */
     }
-    
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -429,6 +457,7 @@ footer {
             opacity: 0;
             transform: translateX(50px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
@@ -439,9 +468,11 @@ footer {
     .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
+
     .toggle .line2 {
         opacity: 0;
     }
+
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
