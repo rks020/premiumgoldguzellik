@@ -635,4 +635,31 @@ footer {
     .achievements {
         justify-content: center;
     }
+}/* Profile Image Gallery */
+.profile-image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profile-image-gallery img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: transform 0.5s ease;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-image-gallery img:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .profile-image-gallery {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
 }
