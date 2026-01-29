@@ -258,46 +258,67 @@ nav {
 
 .service-card {
     background: var(--white);
-    padding: 2rem;
     text-align: center;
+    /* Keep centered for text, or left if preferred */
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    padding: 0;
+    /* Remove padding from card itself to let image flush */
+    display: flex;
+    flex-direction: column;
 }
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.service-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-img img {
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.1);
+}
+
+.service-info {
+    padding: 1.5rem;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(184, 134, 11, 0.15);
+    /* Golden shadow */
 }
 
-.service-card:hover::before {
+/* Remove old before pseudo-element or keep it at bottom */
+.service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover::after {
     transform: scaleX(1);
 }
 
-.service-icon {
-    font-size: 3rem;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-}
-
 .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
 }
 
 /* About Section */
