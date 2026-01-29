@@ -529,4 +529,110 @@ footer {
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+}/* Profile Section Styles */
+.profile-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-dark);
+    /* Dark background to contrast with About section if it's light, or match styling */
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-content h2 {
+    font-size: 3rem;
+    /* Match hero heading size or slightly smaller */
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: goldShine 3s linear infinite;
+    display: inline-block;
+}
+
+.profile-title {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.profile-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.achievements span {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: var(--color-gold);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.achievements span:hover {
+    background: var(--color-gold);
+    color: var(--color-bg-dark);
+    transform: translateY(-3px);
+}
+
+.profile-image {
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .profile-container .profile-image {
+        order: -1;
+        /* Show image first on mobile? Or verify preference. Usually text first is better for "Who is she". Let's keep text first or image first? Image first creates connection. Let's try Image first on mobile. */
+        order: 1;
+        /* Actually standard is text then image in column or image then text. The About section was Grid. */
+    }
+
+    .achievements {
+        justify-content: center;
+    }
 }
