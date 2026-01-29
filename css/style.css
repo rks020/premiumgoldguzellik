@@ -258,13 +258,16 @@ nav {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    /* Golden Text Gradient */
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    /* Golden Text Gradient with Shine */
+    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    /* Remove shadow to make gradient pop */
     letter-spacing: 2px;
+    animation: goldShine 3s linear infinite;
 }
 
 .hero p {
