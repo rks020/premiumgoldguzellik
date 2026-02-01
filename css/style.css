@@ -529,7 +529,9 @@ footer {
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-}/* Profile Section Styles */
+}
+
+/* Profile Section Styles */
 .profile-section {
     padding: 80px 0;
     background-color: var(--color-bg-dark);
@@ -635,7 +637,9 @@ footer {
     .achievements {
         justify-content: center;
     }
-}/* Profile Image Gallery */
+}
+
+/* Profile Image Gallery */
 .profile-image-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -662,7 +666,9 @@ footer {
         grid-template-columns: 1fr;
         /* Stack on mobile */
     }
-}/* Testimonials Section */
+}
+
+/* Testimonials Section */
 .testimonials-section {
     padding: 80px 0;
     background-color: #0a0a0a;
@@ -714,11 +720,12 @@ footer {
 
 .testimonials-track {
     display: flex;
-    gap: 30px;
-    /* Calculate width based on items: (350px width + 30px gap) * 9 items = approx 3420px */
+    /* Remove gap to use margin for perfect width calculation */
+    gap: 0;
     width: max-content;
-    animation: scrollRight 30s linear infinite;
-    /* Scrolling to right as requested "sağa doğru aksın" */
+    animation: scrollRight 40s linear infinite;
+    /* Slowed down slightly for better reading */
+    /* Scrolling to right */
 }
 
 /* Pause on hover for readability */
@@ -733,6 +740,8 @@ footer {
     border-radius: 15px;
     padding: 30px;
     width: 350px;
+    /* Use margin instead of gap for seamless loop calculation */
+    margin-right: 30px;
     flex-shrink: 0;
     text-align: left;
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -746,9 +755,12 @@ footer {
 }
 
 .testimonial-card .stars {
-    color: var(--color-gold);
+    color: #FFD700;
+    /* Direct hex for maximum brightness */
     margin-bottom: 15px;
     font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    /* Glow effect */
 }
 
 .testimonial-card .review-text {
