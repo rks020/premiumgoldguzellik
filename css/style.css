@@ -662,4 +662,144 @@ footer {
         grid-template-columns: 1fr;
         /* Stack on mobile */
     }
+}/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+    /* Slightly lighter than pure black */
+    text-align: center;
+    overflow: hidden;
+    /* Hide overflow for marquee */
+}
+
+.testimonials-section .section-title {
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: goldShine 3s linear infinite;
+    display: inline-block;
+    font-size: 2.5rem;
+}
+
+.testimonials-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gradient masks for smooth fade edges */
+.testimonials-wrapper::before,
+.testimonials-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.testimonials-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0a0a0a, transparent);
+}
+
+.testimonials-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0a0a0a, transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    /* Calculate width based on items: (350px width + 30px gap) * 9 items = approx 3420px */
+    width: max-content;
+    animation: scrollRight 30s linear infinite;
+    /* Scrolling to right as requested "sağa doğru aksın" */
+}
+
+/* Pause on hover for readability */
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassy dark card */
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px;
+    flex-shrink: 0;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold);
+    background: rgba(255, 215, 0, 0.08);
+}
+
+.testimonial-card .stars {
+    color: var(--color-gold);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.testimonial-card .review-text {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.testimonial-card .review-author {
+    font-weight: 700;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+/* Scroll Animation */
+/* "sağa doğru aksın" means moving towards the right. 
+   So elements start at left (translateX(-50%)) and move to 0. 
+   Or start at -100% and move to 0? 
+   Standard marquee usually moves left (content enters from right). 
+   User specifically asked "sağa doğru aksın" (flow to the right).
+   So content should move >>>>> direction.
+   This means we start with the left-most overlapping part visible? 
+   Let's assume standard marquee loop logic but positive translateX.
+   If we have duplicate items (A B C D A B C D), we can start at -50% (show middle set) and move to 0.
+*/
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+        /* Start halfway through (showing second set) */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Move to processing start */
+    }
+
+    /* Wait, standard scrolling logic:
+       If items are [1,2,3,4,5, 1,2,3,4,5]
+       Total width W.
+       Move from -W/2 to 0 gives user feeling of moving right.
+    */
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 280px;
+        /* Slightly smaller on mobile */
+        padding: 20px;
+    }
 }
