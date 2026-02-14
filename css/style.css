@@ -651,9 +651,9 @@ footer {
 
 /* Profile Image Gallery */
 .profile-image-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image-gallery img {
