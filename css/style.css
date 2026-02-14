@@ -120,6 +120,16 @@ img {
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
+.service-category-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--gold-dark);
+    font-family: var(--font-heading);
+    position: relative;
+    width: 100%;
+}
+
 /* Header */
 header {
     background-color: rgba(18, 18, 18, 0.95);
