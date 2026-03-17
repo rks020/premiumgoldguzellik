@@ -1,7 +1,7 @@
 :root {
-    --gold: #FFD700;
-    --gold-dark: #B8860B;
-    --gold-light: #F0E68C;
+    --brand: #82A65F;
+    --brand-dark: #5A7A3B;
+    --brand-light: #B8D896;
     --black: #121212;
     --dark-gray: #1E1E1E;
     --light-gray: #F5F5F5;
@@ -61,16 +61,16 @@ img {
     padding: 0 1rem;
 }
 
-.text-gold {
-    color: var(--gold);
+.text-brand {
+    color: var(--brand);
 }
 
 .btn {
     display: inline-block;
     padding: 12px 30px;
     background: transparent;
-    border: 2px solid var(--gold);
-    color: var(--gold);
+    border: 2px solid var(--brand);
+    color: var(--brand);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -81,19 +81,19 @@ img {
 }
 
 .btn:hover {
-    background: var(--gold);
+    background: var(--brand);
     color: var(--black);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px rgba(130, 166, 95, 0.4);
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, var(--gold-dark), var(--gold));
+    background: linear-gradient(45deg, var(--brand-dark), var(--brand));
     color: var(--black);
     border: none;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(45deg, var(--gold), var(--gold-light));
+    background: linear-gradient(45deg, var(--brand), var(--brand-light));
     transform: translateY(-2px);
 }
 
@@ -117,14 +117,14 @@ img {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--brand), transparent);
 }
 
 .service-category-title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--gold-dark);
+    color: var(--brand-dark);
     font-family: var(--font-heading);
     position: relative;
     width: 100%;
@@ -161,32 +161,32 @@ nav {
     margin-right: 15px;
     border-radius: 50%;
     /* Circular modern look */
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(130, 166, 95, 0.3);
     /* Subtle gold border */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 15px rgba(130, 166, 95, 0.2);
     transition: all 0.3s ease;
 }
 
 .logo:hover img {
     transform: rotate(5deg) scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 25px rgba(130, 166, 95, 0.4);
 }
 
 .logo span {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    /* Luxury Gold Gradient Text */
-    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    /* Luxury Brand Gradient Text */
+    background: linear-gradient(to right, #FFF, var(--brand), var(--brand-dark), var(--brand), #FFF);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     letter-spacing: 1px;
-    animation: goldShine 3s linear infinite;
+    animation: brandShine 3s linear infinite;
 }
 
-@keyframes goldShine {
+@keyframes brandShine {
     to {
         background-position: 200% center;
     }
@@ -212,12 +212,12 @@ nav {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--gold);
+    background-color: var(--brand);
     transition: var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+    color: var(--brand);
 }
 
 .nav-links a:hover::after {
@@ -232,7 +232,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: var(--gold);
+    background-color: var(--brand);
     margin: 5px;
     transition: var(--transition);
 }
@@ -259,7 +259,7 @@ nav {
     /* Glassmorphism effect */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(130, 166, 95, 0.1);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out;
@@ -269,7 +269,7 @@ nav {
     font-size: 4rem;
     margin-bottom: 1.5rem;
     /* Golden Text Gradient with Shine */
-    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background: linear-gradient(to right, #FFF, var(--brand), var(--brand-dark), var(--brand), #FFF);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -277,7 +277,7 @@ nav {
     text-shadow: none;
     /* Remove shadow to make gradient pop */
     letter-spacing: 2px;
-    animation: goldShine 3s linear infinite;
+    animation: brandShine 3s linear infinite;
 }
 
 .hero p {
@@ -335,7 +335,7 @@ nav {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(184, 134, 11, 0.15);
+    box-shadow: 0 20px 40px rgba(90, 122, 59, 0.15);
     /* Golden shadow */
 }
 
@@ -347,7 +347,7 @@ nav {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+    background: linear-gradient(90deg, var(--brand-dark), var(--brand));
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.4s ease;
@@ -382,7 +382,7 @@ nav {
 }
 
 .about-text h3 {
-    color: var(--gold);
+    color: var(--brand);
     margin-bottom: 1rem;
 }
 
@@ -393,8 +393,8 @@ nav {
 
 .about-image img {
     border-radius: 8px;
-    border: 2px solid var(--gold);
-    box-shadow: -15px 15px 0 rgba(184, 134, 11, 0.2);
+    border: 2px solid var(--brand);
+    box-shadow: -15px 15px 0 rgba(90, 122, 59, 0.2);
 }
 
 /* Footer */
@@ -402,7 +402,7 @@ footer {
     background-color: var(--black);
     color: var(--text-light);
     padding: 3rem 0 1rem;
-    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-top: 1px solid rgba(130, 166, 95, 0.2);
 }
 
 .footer-content {
@@ -413,7 +413,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: var(--gold);
+    color: var(--brand);
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
 }
@@ -430,7 +430,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--gold);
+    color: var(--brand);
 }
 
 .footer-bottom {
@@ -561,22 +561,22 @@ footer {
     font-size: 3rem;
     /* Match hero heading size or slightly smaller */
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background: linear-gradient(to right, #FFF, var(--brand), var(--brand-dark), var(--brand), #FFF);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: goldShine 3s linear infinite;
+    animation: brandShine 3s linear infinite;
     display: inline-block;
 }
 
 .profile-title {
     font-size: 1.5rem;
-    color: var(--color-gold);
+    color: var(--brand);
     margin-bottom: 20px;
     font-weight: 300;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    border-bottom: 1px solid rgba(130, 166, 95, 0.3);
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -595,11 +595,11 @@ footer {
 }
 
 .achievements span {
-    background: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: rgba(130, 166, 95, 0.1);
+    border: 1px solid rgba(130, 166, 95, 0.3);
     padding: 10px 20px;
     border-radius: 30px;
-    color: var(--color-gold);
+    color: var(--brand);
     font-size: 0.95rem;
     display: flex;
     align-items: center;
@@ -608,7 +608,7 @@ footer {
 }
 
 .achievements span:hover {
-    background: var(--color-gold);
+    background: var(--brand);
     color: var(--color-bg-dark);
     transform: translateY(-3px);
 }
@@ -621,7 +621,7 @@ footer {
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(130, 166, 95, 0.2);
     transition: transform 0.5s ease;
 }
 
@@ -661,7 +661,7 @@ footer {
     width: auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(130, 166, 95, 0.2);
     transition: transform 0.5s ease;
     height: 100%;
     object-fit: cover;
@@ -691,12 +691,12 @@ footer {
 
 .testimonials-section .section-title {
     margin-bottom: 50px;
-    background: linear-gradient(to right, #FFF, #FFD700, #B8860B, #FFD700, #FFF);
+    background: linear-gradient(to right, #FFF, var(--brand), var(--brand-dark), var(--brand), #FFF);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: goldShine 3s linear infinite;
+    animation: brandShine 3s linear infinite;
     display: inline-block;
     font-size: 2.5rem;
 }
@@ -747,7 +747,7 @@ footer {
 .testimonial-card {
     background: rgba(255, 255, 255, 0.05);
     /* Glassy dark card */
-    border: 1px solid rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(130, 166, 95, 0.2);
     border-radius: 15px;
     padding: 30px;
     width: 350px;
@@ -761,16 +761,16 @@ footer {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    border-color: var(--color-gold);
-    background: rgba(255, 215, 0, 0.08);
+    border-color: var(--brand);
+    background: rgba(130, 166, 95, 0.08);
 }
 
 .testimonial-card .stars {
-    color: #FFD700;
+    color: var(--brand);
     /* Direct hex for maximum brightness */
     margin-bottom: 15px;
     font-size: 1.1rem;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    text-shadow: 0 0 10px rgba(130, 166, 95, 0.6);
     /* Glow effect */
 }
 
@@ -784,7 +784,7 @@ footer {
 
 .testimonial-card .review-author {
     font-weight: 700;
-    color: var(--color-gold);
+    color: var(--brand);
     text-transform: uppercase;
     font-family: var(--font-heading);
     letter-spacing: 1px;
