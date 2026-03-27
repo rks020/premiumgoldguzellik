@@ -192,6 +192,31 @@ nav {
     }
 }
 
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--brand);
+    font-style: italic;
+    letter-spacing: 1px;
+    border-left: 1px solid rgba(130, 166, 95, 0.3);
+    padding-left: 15px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 0.9rem;
+        padding-left: 10px;
+        gap: 8px;
+    }
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
