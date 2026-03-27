@@ -3,25 +3,36 @@
   <url>
     <loc>https://hnaura.com.tr/</loc>
     <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://hnaura.com.tr/adapazari-guzellik-merkezi/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://hnaura.com.tr/adapazari-lazer-epilasyon/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://hnaura.com.tr/havva-sari/</loc>
     <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hnaura.com.tr/hydrafacial-cilt-bakimi/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hnaura.com.tr/arc-sistem-bolgesel-zayiflama/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hnaura.com.tr/lazer-epilasyon-merkezi/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hnaura.com.tr/adapazari-guzellik-merkezi/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://hnaura.com.tr/adapazari-lazer-epilasyon/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <priority>0.80</priority>
   </url>
 </urlset>

@@ -266,8 +266,9 @@ nav {
 }
 
 .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(2.2rem, 8vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
     /* Golden Text Gradient with Shine */
     background: linear-gradient(to right, #FFF, var(--brand), var(--brand-dark), var(--brand), #FFF);
     background-size: 200% auto;
@@ -275,8 +276,7 @@ nav {
     background-clip: text;
     color: transparent;
     text-shadow: none;
-    /* Remove shadow to make gradient pop */
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     animation: brandShine 3s linear infinite;
 }
 
@@ -788,7 +788,31 @@ footer {
     text-transform: uppercase;
     font-family: var(--font-heading);
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
+.testimonial-card .review-author::after {
+    content: '\f058'; /* FontAwesome check-circle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.google-badge i { color: #4285F4; }
 
 /* Scroll Animation */
 /* "sağa doğru aksın" means moving towards the right. 
